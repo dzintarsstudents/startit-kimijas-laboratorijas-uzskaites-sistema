@@ -10,5 +10,8 @@ def index():
 @app.route('/sveiki')
 def sveiki():
     return "Nav nekāds rīts!"
+@app.route('/sveiki<vards>')
+def sveikiPersona():
+    return f"Sveiki (vards)"
 if __name__ == "__main__":
     app.run("0.0.0.0", debug=True)
